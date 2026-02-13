@@ -1,5 +1,4 @@
 /* Base */
-
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -7,13 +6,12 @@ body {
     min-height: 100vh;
 }
 
-/* Background switches after unlock */
+/* Background after unlock */
 .app-background {
     background: linear-gradient(to bottom, #48b753, #96d39d);
 }
 
 /* Screens */
-
 .screen {
     min-height: 100vh;
     display: flex;
@@ -22,8 +20,7 @@ body {
     padding: 20px;
 }
 
-/* Card Container */
-
+/* Card */
 .card {
     width: 100%;
     max-width: 400px;
@@ -40,7 +37,6 @@ body {
 }
 
 /* Inputs + Buttons */
-
 input {
     width: 100%;
     padding: 12px;
@@ -60,6 +56,7 @@ button {
     width: 100%;
     font-size: 16px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 button:active {
@@ -72,7 +69,6 @@ button:active {
 }
 
 /* Image Slider */
-
 .slider img {
     width: 100%;
     border-radius: 20px;
@@ -81,7 +77,6 @@ button:active {
 }
 
 /* Love Meter */
-
 .love-meter {
     width: 100%;
     height: 20px;
@@ -98,7 +93,6 @@ button:active {
 }
 
 /* Notification */
-
 .notification {
     position: fixed;
     top: -120px;
@@ -119,7 +113,6 @@ button:active {
 }
 
 /* Floating Hearts */
-
 .hearts {
     position: fixed;
     width: 100%;
