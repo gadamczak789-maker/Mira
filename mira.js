@@ -1,3 +1,4 @@
+// Photos
 const photos = [
     "photo1.jpg",
     "photo2.jpg",
@@ -9,6 +10,7 @@ const photos = [
     "photo8.jpg"
 ];
 
+// Memory messages
 const messages = [
     "The first time I drove you home",
     "My favourite photo of us",
@@ -20,6 +22,7 @@ const messages = [
     "I love you Mira <3"
 ];
 
+// Compliments
 const compliments = [
     "Fact #27: Mira is illegally cute.",
     "Fact #42: Scientists are studying her smile.",
@@ -28,6 +31,7 @@ const compliments = [
     "Fact #12: Too powerful for this planet."
 ];
 
+// Wrong password hints
 const wrongPasswords = [
     "The password is something I call you",
     "From a very special day",
@@ -39,15 +43,17 @@ const wrongPasswords = [
 let currentIndex = 0;
 let loveLevel = 0;
 
-/* PASSWORD CHECK */
-
+// PASSWORD CHECK
 function checkPassword() {
-    const input = document.getElementById("passwordInput").value;
+    const input = document.getElementById("passwordInput").value.trim();
 
     if (input === "halibut++") {
-        unlockApp();
-        document.getElementById("app").classList.add("hidden");
+        // Secret mode unlock
+        document.getElementById("lockScreen").classList.add("hidden");
         document.getElementById("secretMode").classList.remove("hidden");
+        document.body.classList.add("app-background");
+        document.getElementById("heartsContainer").classList.remove("hidden");
+        document.getElementById("bgMusic").play();
     }
     else if (input.toLowerCase() === "halibut") {
         unlockApp();
@@ -66,7 +72,8 @@ function unlockApp() {
 
     document.getElementById("heartsContainer").classList.remove("hidden");
 
-    document.getElementById("bgMusic").play();
+    const bgMusic = document.getElementById("bgMusic");
+    if (bgMusic.paused) bgMusic.play();
 
     setTimeout(() => {
         const notif = document.getElementById("notification");
@@ -79,8 +86,7 @@ function unlockApp() {
     }, 1000);
 }
 
-/* SLIDER */
-
+// IMAGE SLIDER
 function nextSlide() {
     currentIndex++;
     if (currentIndex >= photos.length) currentIndex = 0;
@@ -89,8 +95,7 @@ function nextSlide() {
     document.getElementById("loveText").innerText = messages[currentIndex];
 }
 
-/* LOVE METER */
-
+// LOVE METER
 function increaseLove() {
     if (loveLevel < 100) {
         loveLevel += 10;
@@ -102,15 +107,13 @@ function increaseLove() {
     }
 }
 
-/* COMPLIMENT */
-
+// GENERATE COMPLIMENT
 function generateCompliment() {
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
     document.getElementById("complimentText").innerText = randomCompliment;
 }
 
-/* HEARTS */
-
+// HEARTS
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
@@ -124,4 +127,3 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
-
