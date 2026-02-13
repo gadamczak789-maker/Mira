@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Saturday</title>
+    <link rel="stylesheet" href="mira.css">
+</head>
+<body>
+
+<!-- Fake iPhone Notification -->
+<div id="notification" class="notification hidden">
+    <div class="notif-content">
+        <strong>Messages</strong>
+        <p>Your loving boyfriend is such a nerd, so he built this for you.</p>
+    </div>
+</div>
+
+<!-- Floating Hearts (hidden until unlock) -->
+<div id="heartsContainer" class="hearts hidden"></div>
+
+<!-- Lock Screen -->
+<div id="lockScreen" class="screen">
+    <div class="card">
+        <h1>User: Mira</h1>
+        <p>Enter Password</p>
+        <input type="password" id="passwordInput" placeholder="...">
+        <button onclick="checkPassword()">Unlock</button>
+        <p id="errorMsg"></p>
+    </div>
+</div>
+
+<!-- Main App -->
+<div id="app" class="screen hidden">
+    <div class="card">
+
+        <h1>I love you Miranda</h1>
+        <h2>Whenever you miss me, this is for you</h2>
+
+        <div class="slider">
+            <img id="slide" src="Photos/photo1.jpg">
+        </div>
+
+        <p id="loveText">
+            Look back on some of our memories together
+        </p>
+
+        <button onclick="nextSlide()">Next Memory</button>
+
+        <hr>
+
+        <h3>My Love for You</h3>
+        <div class="love-meter">
+            <div id="loveFill"></div>
+        </div>
+        <button onclick="increaseLove()">Worm your way into my cold heart again</button>
+        <p id="loveStatus"></p>
+
+        <hr>
+
+        <button onclick="generateCompliment()">Generate Mira Fact</button>
+        <p id="complimentText"></p>
+
+    </div>
+</div>
+
+<!-- Secret Mode -->
+<div id="secretMode" class="screen hidden">
+    <div class="card">
+        <h1>WOAH! HOW DID YOU GET HERE!!</h1>
+        <p>You have found the secret menu, but guess what</p>
+        <p>You're stuck with me forever. ;)</p>
+    </div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="audio1.mp3" type="audio/mpeg">
+</audio>
+
+<script src="mira.js"></script>
+</body>
+</html>
