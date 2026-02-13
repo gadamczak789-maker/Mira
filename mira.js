@@ -1,12 +1,12 @@
 const photos = [
-    "Photos/photo1.jpg",
-    "Photos/photo2.jpg",
-    "Photos/photo3.jpg",
-    "Photos/photo4.jpg",
-    "Photos/photo5.jpg",
-    "Photos/photo6.jpg",
-    "Photos/photo7.jpg",
-    "Photos/photo8.jpg"
+    "photo1.jpg",
+    "photo2.jpg",
+    "photo3.jpg",
+    "photo4.jpg",
+    "photo5.jpg",
+    "photo6.jpg",
+    "photo7.jpg",
+    "photo8.jpg"
 ];
 
 const messages = [
@@ -124,3 +124,4 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
+
