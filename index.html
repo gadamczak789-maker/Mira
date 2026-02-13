@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Saturday</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="mira.css">
+
+    <!-- iPhone PWA meta -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" href="icon.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icon.png">
 </head>
 <body>
 
@@ -20,7 +23,7 @@
     </div>
 </div>
 
-<!-- Floating Hearts (hidden until unlock) -->
+<!-- Floating Hearts -->
 <div id="heartsContainer" class="hearts hidden"></div>
 
 <!-- Lock Screen -->
@@ -37,17 +40,14 @@
 <!-- Main App -->
 <div id="app" class="screen hidden">
     <div class="card">
-
         <h1>I love you Miranda</h1>
         <h2>Whenever you miss me, this is for you</h2>
 
         <div class="slider">
-            <img id="slide" src="photo1.jpg">
+            <img id="slide" src="photo1.jpg" alt="Memory Photo">
         </div>
 
-        <p id="loveText">
-            Look back on some of our memories together
-        </p>
+        <p id="loveText">Look back on some of our memories together</p>
 
         <button onclick="nextSlide()">Next Memory</button>
 
@@ -57,14 +57,13 @@
         <div class="love-meter">
             <div id="loveFill"></div>
         </div>
-        <button onclick="increaseLove()">Worm your way into my cold heart again</button>
+        <button onclick="increaseLove()">Warm your way into my cold heart again</button>
         <p id="loveStatus"></p>
 
         <hr>
 
         <button onclick="generateCompliment()">Generate Mira Fact</button>
         <p id="complimentText"></p>
-
     </div>
 </div>
 
@@ -77,13 +76,12 @@
     </div>
 </div>
 
+<!-- Background Music -->
 <audio id="bgMusic" loop>
     <source src="audio1.mp3" type="audio/mpeg">
 </audio>
 
+<!-- JS -->
 <script src="mira.js"></script>
 </body>
 </html>
-
-
-
